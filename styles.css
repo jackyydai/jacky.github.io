@@ -1,0 +1,46 @@
+
+
+body {
+    display: flex;
+    justify-content: center; 
+    /* align-items: center; */
+    min-height: 100vh;
+    background-color: #8297bb; 
+    
+}
+
+.container {
+    margin-top: 300px;
+    text-align: center;
+    max-width: 500px; /* Set your desired maximum width */
+    width: 100%; /* Ensure the container takes up the full width if the content is smaller */
+    padding: 0 20px; /* Optional padding for better readability */
+}
+
+a {
+    color: #efd154ff;
+    
+
+}
+
+h1 {
+    color: #efd154ff;
+    /* line-height: 0; */
+}
+
+h2 {
+    /* font-family: 'Courier New', monospace; */
+    color: rgb(108, 108, 108);
+}
+
+p {
+    font-family: 'Courier New', monospace;
+    color: rgb(255, 255, 255);
+}
+
+.line {
+    width: 100%;
+
+    border-bottom: 2px solid #ffffff; /* Adjust color and thickness as needed */
+    margin: 20px auto; /* Optional margin for spacing */
+}
