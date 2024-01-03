@@ -4,28 +4,185 @@ body {
     display: flex;
     justify-content: center; 
     /* align-items: center; */
+    text-align: center;
     min-height: 100vh;
     background-color: #8297bb; 
-    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('bg-image6.jpeg');
+    background-size: cover;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
-.container {
-    margin-top: 300px;
+
+.topbar {
+    /* overflow: hidden; */
+    position: fixed; /* Set the navbar to fixed position */
+    /* top: 10; Position the navbar at the top of the page */
+    /* display: flex; */
+    justify-content: left; 
+    text-align: left;
+    align-items: center;
+    top: 0px;
+    width: 100%;
+    height: 28px;
+    background-color: rgba(29, 29, 29, 0.2);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    font-family: sans-serif;
+    font-size: smaller;
+    text-shadow: 2px 2px 5px #232323;
+    
+    /* border-radius: 5%;  */
+  }
+
+.topbar .logo{
+    /* position: absolute; */
+    float: left;
+    justify-content: left; 
+    text-align: left;
+    /* align-items: center; */
+    align-items: center;
+    height: 70%;
+    /* margin-left: 15px; */
+    /* padding: 5px; */
+    padding: 3px 15px 0px 15px;
+    filter: drop-shadow(2px 2px 5px #232323);
+    /* text-shadow:  */
+}
+
+
+.topbar .wifi{
+    /* background-color: black; */
+    text-align: right; 
+    float: right;
+    display: block;
     text-align: center;
-    max-width: 500px; /* Set your desired maximum width */
-    width: 100%; /* Ensure the container takes up the full width if the content is smaller */
-    padding: 0 20px; /* Optional padding for better readability */
+    text-decoration: none; 
+    opacity: 1000%;
+    height: 15px;
+    width: 22px;
+    padding: 6px 8px 0px 8px;
+    filter: drop-shadow(2px 2px 5px #232323);
 }
 
-a {
-    color: #efd154ff;
+.topbar .blue{
+    /* background-color: black; */
+    text-align: right; 
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none; 
+    opacity: 1000%;
+    height: 80%;
+    width: 30px;
+    padding: 2px 8px 0px 8px;
+    filter: drop-shadow(2px 2px 5px #232323);
+}
+
+.topbar .battery{
+    /* background-color: black; */
+    text-align: right; 
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none; 
+    opacity: 1000%;
+    /* align-items: center; */
+    height: 58%;
+    width: 60px;
+    padding: 5px 8px 0px 8px;
+    filter: drop-shadow(2px 2px 5px #232323);
+}
+
+.topbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    /* opacity: 1000%; */
+    padding: 6px 12px 0px 0px;;
+    text-shadow: 1px 1px 5px #232323;
+  }
+
+.topbar b {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    /* opacity: 1000%; */
+    padding: 6px 12px 0px 0px;;
+  }
+
+  .topbar date {
+    text-align: right;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    /* opacity: 1000%; */
+    padding: 6px 15px 0px 8px;
+  }
+
+
+.navbar {
+  /* overflow: hidden; */
+  position: fixed; /* Set the navbar to fixed position */
+  /* top: 10; Position the navbar at the top of the page */
+  bottom: 8px;
+  width: 93%; /* Full width */
+  background-color: rgba(130, 151, 187, 0.8);
+  z-index: 1000;
+  /* border-radius: 5%;  */
+  opacity: 50%;
+  border: 2px solid #727272;
+  border-radius: 10px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    opacity: 1000%;
+  }
+  
+  /* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+.outercontainer {
+    /* prob not needed ??? */
+    display: flex;
+    /* justify-content: center;  */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* top: 100px; */
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
     
-
+    /* width: 100%;  */
+    /* height: 100vh; 100% of the viewport height    */
 }
+
+
 
 h1 {
     color: #efd154ff;
-    /* line-height: 0; */
 }
 
 h2 {
@@ -43,4 +200,294 @@ p {
 
     border-bottom: 2px solid #ffffff; /* Adjust color and thickness as needed */
     margin: 20px auto; /* Optional margin for spacing */
+}
+
+
+.smallline {
+    width: 50%;
+
+    border-bottom: 2px solid #ffffff; /* Adjust color and thickness as needed */
+    margin: 20px auto; /* Optional margin for spacing */
+}
+
+
+
+#close{
+    padding: 7px; /* Adjust the padding to make the button smaller */
+    border-radius: 50%; /* Make the button circular */
+    background-color: rgba(73, 85, 107, 0.8); /* Set the background color to red */
+    border: none; /* Remove border for a cleaner look */
+    margin: 5px;
+}
+
+.buttons:hover #close{
+    background-color: rgb(212, 42, 42);
+}
+
+#mini{
+    padding: 7px; /* Adjust the padding to make the button smaller */
+    border-radius: 50%; /* Make the button circular */
+    background-color: rgba(73, 85, 107, 0.8); /* Set the background color to red */
+    border: none; /* Remove border for a cleaner look */
+}
+
+.buttons:hover #mini{
+    background-color: rgb(226, 175, 45);
+}
+
+#exp{
+    padding: 7px; /* Adjust the padding to make the button smaller */
+    border-radius: 50%; /* Make the button circular */
+    background-color: rgba(73, 85, 107, 0.8); /* Set the background color to red */
+    border: none; /* Remove border for a cleaner look */
+    margin: 5px;
+}
+
+.buttons:hover #exp{
+    background-color: rgb(42, 212, 56);
+}
+
+
+
+
+#window{
+    display: none;
+    /* top: 100px; */
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    text-align: center;
+    align-items: center;
+    min-width: 500px;
+    min-height: 500px;
+    width: 700px;
+    height: 650px;
+
+    /* width: 100%;
+    height: 100%; */
+
+    /* padding: 0 20px; Optional padding for better readability */
+    background-color: rgba(130, 151, 187, 0.8);
+    backdrop-filter: blur(1px);
+    border: 2px solid #727272;
+    border-radius: 10px;
+    
+    resize:both;
+    overflow: hidden;
+    z-index: 10;
+    justify-content: center; 
+    box-shadow: 2px 2px 40px #232323;
+}
+
+.outersite{
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    overflow: scroll;
+    max-height: 100%;   
+}
+.site{
+    
+    /* overflow: auto; */
+    max-width: 700px; 
+    width: 100%;
+    
+}
+
+#windowheader {
+    /* position: fixed; */
+    position: sticky;
+    padding: 5px;
+    text-align: left;
+    /* cursor: move; */
+    z-index: 10;
+    background-color: rgba(105, 132, 181, 0.6);
+    /* color: #fff; */
+  }
+
+
+
+  
+
+
+
+/* terminal css  */
+
+
+
+#termwindow{
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    text-align: center;
+    align-items: center;
+    min-width: 600px;
+    min-height: 300px;
+    width: 600px;
+    height: 400px;
+    /* width: 100%;
+    height: 100%; */
+    /* padding: 0 20px; Optional padding for better readability */
+    background-color: #211D1B;
+    backdrop-filter: blur(1px);
+    border: 1px solid #727272;
+    border-radius: 10px;
+    resize:both;
+    overflow: hidden;
+    z-index: 10;
+    justify-content: center; 
+    box-shadow: 2px 2px 30px #232323;
+    /* flex-direction: column-reverse; */
+}
+
+
+#termheader {
+    /* position: fixed; */
+    position: fixed;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    /* cursor: move; */
+    z-index: 10;
+    background-color: rgba(56, 56, 56, 1);
+  }
+
+
+
+.outerterm{
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    max-height: 100%;   
+    background-color: #211D1B;
+    /* flex-direction: column-reverse; */
+}
+
+
+
+
+
+.term {
+    text-align: left;
+    /* position: absolute; */
+    /* position: relative; */
+    /* margin-top: 20px; */
+    z-index: 1;
+    margin: 0;
+    padding: 25px 20px;
+    min-height: 99%;
+    width: 100%;
+    min-width: 550px;
+    color: #519975;
+    background: #211D1B;
+    font-family: cursor, monospace;
+    overflow-x: hidden;
+    /* flex-direction: column-reverse; */
+}
+
+
+::selection {
+    color: #211830;
+    background-color: #519975;
+  }
+  ::-moz-selection {
+    color: #211830;
+    background-color: #519975;
+  }
+  textarea {
+    left: -1000px;
+    position: absolute;
+  }
+  b {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+
+  /* Cursor Start */
+.cursor {
+    font-size: 12px;
+    color: #73ABAD;
+    background-color: #73ABAD;
+    position: relative;
+    opacity: 1;
+    height: 1.5em;
+    width: 10px;
+    max-width: 10px;
+    transform: translateY(4px);
+    overflow: hidden;
+    text-indent: -5px;
+    display: inline-block;
+    text-decoration: blink;
+    animation: blinker 1s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  #command {
+    cursor: text;
+    height: 50px;
+    color: #73ABAD;
+  }
+  #liner {
+    line-height: 1.3em;
+    margin-top: -2px;
+    animation: show 0.5s ease forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+  }
+  #liner::before {
+    color: #519975;
+    content: "visitor@fkcodes.com:~$";
+  }
+  #liner.password::before {
+    content: "Password:";
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Cursor End */
+
+
+#closet{
+    padding: 7px; /* Adjust the padding to make the button smaller */
+    border-radius: 50%; /* Make the button circular */
+    background-color: rgb(176, 49, 49); /* Set the background color to red */
+    border: none; /* Remove border for a cleaner look */
+    margin: 5px;
+}
+
+.buttons:hover #closet{
+    background-color: rgb(212, 42, 42);
+}
+
+#minit{
+    padding: 7px; /* Adjust the padding to make the button smaller */
+    border-radius: 50%; /* Make the button circular */
+    background-color: rgb(190, 151, 51); /* Set the background color to red */
+    border: none; /* Remove border for a cleaner look */
+}
+
+.buttons:hover #minit{
+    background-color: rgb(226, 175, 45);
+}
+
+#expt{
+    padding: 7px; /* Adjust the padding to make the button smaller */
+    border-radius: 50%; /* Make the button circular */
+    background-color: rgb(49, 180, 60); /* Set the background color to red */
+    border: none; /* Remove border for a cleaner look */
+    margin: 5px;
+}
+
+.buttons:hover #expt{
+    background-color: rgb(42, 212, 56);
 }

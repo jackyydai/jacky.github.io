@@ -1,1 +1,0 @@
-gsap.from('.container', {duration: 1, y: "-100%"})

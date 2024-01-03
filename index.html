@@ -6,80 +6,124 @@
     <title> JackyDai </title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" defer> </script>
-    <script src="script.js"  defer>  </script>
+    
+    <link rel="icon" href="icon.ico" type="image/x-icon">
 </head>
 <body>
         <!-- <h1> </h1> -->
-    <div class="container">
+    <div class="topbar">
+            <img src="moonlogo.png" class = "logo">
+            <b>Jacky</b>
+            <a>Ucla</a>
+            <a>Cs</a>
+            <a>Resume</a>
+            <a>Email</a>
+            
+            <date id="datetime"></date>
+            <img src="wifiicon.png" class = "wifi"></img>
+            <img src="batteryIcon.png" class = "battery"></img>
+            <img src="blue.png" class = "blue"></img>
+            
+            
+    </div>
+    <div class="navbar">
+            <a href="#news">.</a>
+            <!-- <a href="#contact">Linkedin</a>
+            <a href="#contact">Resume</a> -->
+    </div>
 
-        <h1>Hi there </h1>
-
-        <!-- <h2> Download my [CV]</h2> -->
-
-        <p> My name is Jacky Dai and I have currently studying computer science at UCLA. I have a passion for all things technology and design, from software engineering to UI/UX.
-            In addition to my love of technology and design, I am also interested in education, fitness, and math.
-            Below are details of some of projects I have developed over my ten plus years of coding experience. 
-        </p>
-    
-        <div class="line"></div>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at turpis sit amet mauris bibendum ultricies.
-            Integer euismod velit ut velit accumsan, sit amet dictum mauris rhoncus.
-            Proin non lacus et justo imperdiet tristique. Nulla facilisi. Nulla facilisi.
-            Vestibulum ultrices augue vel odio rhoncus, sit amet tincidunt ligula efficitur.
-            Aenean ullamcorper orci non leo aliquam, vel convallis lacus dapibus.
-        </p>
-    
-        <p>
-            Sed condimentum ex nec mauris fermentum, at bibendum nulla condimentum.
-            Aliquam erat volutpat. Sed nec semper lacus. Nam in massa auctor, cursus ex at, iaculis metus.
-            Curabitur bibendum sapien eget libero varius scelerisque.
-            Ut in risus quis libero bibendum dapibus. Sed vel orci augue.
-            Vivamus id mauris vel neque rhoncus tincidunt.
-        </p>
-
-        <div class="line"></div>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at turpis sit amet mauris bibendum ultricies.
-            Integer euismod velit ut velit accumsan, sit amet dictum mauris rhoncus.
-            Proin non lacus et justo imperdiet tristique. Nulla facilisi. Nulla facilisi.
-            Vestibulum ultrices augue vel odio rhoncus, sit amet tincidunt ligula efficitur.
-            Aenean ullamcorper orci non leo aliquam, vel convallis lacus dapibus.
-        </p>
-    
-        <p>
-            Sed condimentum ex nec mauris fermentum, at bibendum nulla condimentum.
-            Aliquam erat volutpat. Sed nec semper lacus. Nam in massa auctor, cursus ex at, iaculis metus.
-            Curabitur bibendum sapien eget libero varius scelerisque.
-            Ut in risus quis libero bibendum dapibus. Sed vel orci augue.
-            Vivamus id mauris vel neque rhoncus tincidunt.
-        </p>
-
-        <div class="line"></div>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at turpis sit amet mauris bibendum ultricies.
-            Integer euismod velit ut velit accumsan, sit amet dictum mauris rhoncus.
-            Proin non lacus et justo imperdiet tristique. Nulla facilisi. Nulla facilisi.
-            Vestibulum ultrices augue vel odio rhoncus, sit amet tincidunt ligula efficitur.
-            Aenean ullamcorper orci non leo aliquam, vel convallis lacus dapibus.
-        </p>
-    
-        <p>
-            Sed condimentum ex nec mauris fermentum, at bibendum nulla condimentum.
-            Aliquam erat volutpat. Sed nec semper lacus. Nam in massa auctor, cursus ex at, iaculis metus.
-            Curabitur bibendum sapien eget libero varius scelerisque.
-            Ut in risus quis libero bibendum dapibus. Sed vel orci augue.
-            Vivamus id mauris vel neque rhoncus tincidunt.
-        </p>
-    
-
+    <div id = "termwindow">
+        <div id="termheader">
+            <div class = "buttons">
+                <button id = "closet"></button>
+                <button id = "minit"></button>
+                <button id = "expt"></button>
+            </div>
+            
+        </div> 
+        <div class = "outersite">
+            <div class="term">
+                <div id="terminal">
+                    <a id="before"></a>
+                </div>      
+                <div id="command" onclick="$('texter').focus();">
+                    <textarea
+                      type="text"
+                      id="texter"
+                      onkeyup="typeIt(this, event)"
+                      onkeydown="typeIt(this, event); 
+                                 moveIt(this.value.length, event)"
+                      onkeypress="typeIt(this, event);"
+                      autofocus
+                    ></textarea>
+                    <div id="liner">
+                      <span id="typer"></span><b class="cursor" id="cursor">█</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
     
     
+    
+    <!-- <div class="outercontainer"> -->
+        <div id = "window">
+            <div id="windowheader">
+                <div class = "buttons">
+                    <button id = "close"></button>
+                    <button id = "mini"></button>
+                    <button id = "exp"></button>
+                </div>
+                
+            </div> 
+            <div class = "outersite">
+                <div class = "site">
+                    <h1>Hi there~ </h1>
+        
+                    <!-- <h2> Download my [CV]</h2> -->
+    
+                    <p> My name is Jacky Dai and I have currently studying computer science at UCLA. I have a passion for all things technology and design, from software engineering to UI/UX.
+                        In addition to my love of technology and design, I am also interested in education, fitness, and math.
+                        Below are details of some of projects I have developed over my ten plus years of coding experience. 
+                    </p>
+                
+                    <div class="line"></div>
+    
+                    <h1> Coursework/Relevent Skills</h1>
+                    <p>
+                        Programming Languages, Machine Learning,
+            Algorithms & Complexity, Software Construction, Artificial intelligence, Computer Architecture, Data Structures, Theory of Computing
+                    </p>
+    
+                    <div class="line"></div>
+                    <h1>Contact</h1>
+                    <p>Reach out on LinkedIn</p>
+    
+                    <div class="line"></div>
+                    <p>Made with:</p>
+                    <p>GSAP</p>
+                    <p>GSAP</p>
+                    <p>+62 cups of Vietnam coffee</p>
+                    <p>+16 cups of Chicken</p>
+                    <p>Bordem</p>
+                    <div class="smallline"></div>
+                    <p> JackyDai (JD) NotA Corporation. All knights reserved.</p>
+    
+                    
+                </div>
+
+            </div>
+            
+            
+        </div>
+    
+    <!-- </div> -->
+    <script src="js/script.js"  defer>  </script>
+    <script src="js/caret.js"></script>
+    <script src="js/commands.js"></script>
+    <script src="js/main.js"></script>
     
 
 </body>
